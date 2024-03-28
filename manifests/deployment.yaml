@@ -24,8 +24,6 @@ spec:
       version: v1
   template:
     metadata:
-      annotations:
-        sidecar.istio.io/inject: "true"
       labels:
         app: myapp
         version: v1
@@ -36,28 +34,4 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: myapp-v2
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: myapp
-      version: v2
-  template:
-    metadata:
-      annotations:
-        sidecar.istio.io/inject: "true"
-      labels:
-        app: myapp
-        version: v2
-    spec:
-      containers:
-      - name: myapp
-        image: gangadhariy/mesh:green
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 80
+
