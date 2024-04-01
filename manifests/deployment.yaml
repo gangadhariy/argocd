@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: quay.io/bitnami/nginx
+        image: quay.io/airshipit/pegleg
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
