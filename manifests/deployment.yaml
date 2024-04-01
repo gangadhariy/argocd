@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: node
+        image: mysql:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
