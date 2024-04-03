@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: quay.io/airshipit/pegleg
+        image: gangadhariy/argo
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
