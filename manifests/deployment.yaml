@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: gangadhariy/argo:6c6f07a6-79da-47a8-89fd-0b441f52afb1
+        image: gangadhariy/argo:2b58c3a2-54a4-497e-8544-a43ab41dd2ae
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
