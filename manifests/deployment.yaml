@@ -15,22 +15,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-v1
+  name: petclinic
 spec:
   replicas: 2
   selector:
     matchLabels:
       app: myapp
-      version: v1
   template:
     metadata:
       labels:
         app: myapp
-        version: v1
     spec:
       containers:
       - name: myapp
-        image: gangadhariy/argo:2f10ae4c-6f07-45c9-8e07-03db5d1aabf2
+        image: admin123/demo:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
