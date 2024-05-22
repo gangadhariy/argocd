@@ -28,8 +28,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: admin123/demo:
-        imagePullPolicy: IfNotPresent
+        image: 
         ports:
         - containerPort: 80
 
