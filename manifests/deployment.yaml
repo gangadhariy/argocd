@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: gyaleholi-quay-hands-on.apps.gmseng02.ocp02.eng/admin123/demo:ffa0f890-bbaf-4968-a454-4b84dc6f93ff
+        image: gyaleholi-quay-hands-on.apps.gmseng02.ocp02.eng/admin123/demo:8d89b6aa-ee4b-4536-8784-2fe0d7fd4c8c
         ports:
         - containerPort: 8080
 
