@@ -1,33 +1,19 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: myappsvc
-  labels:
-    app: myapp
-spec:
-  type: NodePort
-  ports:
-  - port: 8080
-  selector:
-    app: myapp
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: petclinic
+  name: my-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: myapp
+      app: nginx
   template:
     metadata:
       labels:
-        app: myapp
+        app: nginx
     spec:
       containers:
-      - name: myapp
-        image: gyaleholi-quay-hands-on.apps.gmseng02.ocp02.eng/admin123/demo:8d89b6aa-ee4b-4536-8784-2fe0d7fd4c8c
+      - name: nginx
+        image: gangadhariy/my-java-app:latest
         ports:
         - containerPort: 8080
-
